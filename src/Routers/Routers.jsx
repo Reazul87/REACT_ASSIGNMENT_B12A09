@@ -4,7 +4,7 @@ import Home from "../Pages/Home";
 import Plants from "../Pages/Plants";
 import Profile from "../Pages/Profile";
 // import LogIn from "../Pages/LogIn";
-// import Register from "../Pages/Register";
+import Register from "../Pages/Register";
 
 export const router = createBrowserRouter([
   {
@@ -23,13 +23,13 @@ export const router = createBrowserRouter([
         path: "/profile",
         element: <Profile></Profile>,
       },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
       // {
       //   path: "/login",
       //   element: <LogIn></LogIn>,
-      // },
-      // {
-      //   path: "/register",
-      //   element: <Register></Register>,
       // },
     ],
   },
