@@ -5,7 +5,7 @@ import MyLink from "./MyLink";
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-200 py-2 shadow border-b border-b-gray-50">
+    <div className="bg-slate-200 py-2 border-b border-b-gray-200">
       <MyContainer className="flex items-center justify-between md:flex-row space-y-2.5 flex-col">
         <Link className="text-xl my-0 md:text-2xl font-semibold text-green-500">
           Green Nest

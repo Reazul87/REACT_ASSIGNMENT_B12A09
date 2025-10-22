@@ -8,7 +8,7 @@ const Register = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="min-h-[96vh] flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 relative overflow-hidden">
+    <div className="min-h-[96vh] flex items-center justify-center bg-gradient-to-tr from-cyan-500 via-purple-600 to-pink-500 relative overflow-hidden">
       <title>Register</title>
 
       <MyContainer>

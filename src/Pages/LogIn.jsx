@@ -8,7 +8,7 @@ const LogIn = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="min-h-[calc(100vh-20px)] flex items-center justify-center bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 overflow-hidden">
+    <div className="min-h-[calc(100vh-20px)] flex items-center justify-center bg-gradient-to-tr from-blue-500 via-indigo-600 to-purple-600 overflow-hidden">
       <title>Login</title>
       <MyContainer>
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-5 lg:p-10 text-white">
