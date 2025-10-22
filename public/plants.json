@@ -1,0 +1,122 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.postimg.cc/snake-plant.png",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Pothos",
+    "category": "Trailing",
+    "price": 12,
+    "rating": 4.5,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "A fast-growing vine with heart-shaped leaves, perfect for beginners.",
+    "image": "https://i.postimg.cc/pothos.png",
+    "providerName": "Leafy Haven"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Monstera Deliciosa",
+    "category": "Statement Plant",
+    "price": 35,
+    "rating": 4.7,
+    "availableStock": 8,
+    "careLevel": "Moderate",
+    "description": "Known for its iconic split leaves, this plant adds a tropical vibe.",
+    "image": "https://i.postimg.cc/monstera.png",
+    "providerName": "Tropical Trends"
+  },
+  {
+    "plantId": 4,
+    "plantName": "ZZ Plant",
+    "category": "Low Maintenance",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "A resilient plant with glossy leaves that tolerates neglect and low light.",
+    "image": "https://i.postimg.cc/zz-plant.png",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 20,
+    "rating": 4.4,
+    "availableStock": 9,
+    "careLevel": "Moderate",
+    "description": "Features elegant white blooms and thrives in shady indoor spaces.",
+    "image": "https://i.postimg.cc/peace-lily.png",
+    "providerName": "Bloom Boutique"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Statement Plant",
+    "price": 45,
+    "rating": 4.3,
+    "availableStock": 5,
+    "careLevel": "High",
+    "description": "A trendy plant with large, violin-shaped leaves that requires bright light.",
+    "image": "https://i.postimg.cc/fiddle-leaf.png",
+    "providerName": "Tropical Trends"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 15,
+    "rating": 4.6,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "A versatile plant with arching green and white leaves, great for hanging baskets.",
+    "image": "https://i.postimg.cc/spider-plant.png",
+    "providerName": "Leafy Haven"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 14,
+    "rating": 4.2,
+    "availableStock": 18,
+    "careLevel": "Easy",
+    "description": "A medicinal plant with thick, fleshy leaves that thrives in bright light.",
+    "image": "https://i.postimg.cc/aloe-vera.png",
+    "providerName": "Desert Blooms"
+  },
+  {
+    "plantId": 9,
+    "plantName": "Philodendron",
+    "category": "Trailing",
+    "price": 25,
+    "rating": 4.5,
+    "availableStock": 7,
+    "careLevel": "Moderate",
+    "description": "A lush plant with glossy, heart-shaped leaves that adapts to various light conditions.",
+    "image": "https://i.postimg.cc/philodendron.png",
+    "providerName": "Bloom Boutique"
+  },
+  {
+    "plantId": 10,
+    "plantName": "Rubber Plant",
+    "category": "Statement Plant",
+    "price": 40,
+    "rating": 4.4,
+    "availableStock": 6,
+    "careLevel": "Moderate",
+    "description": "A striking plant with large, dark green leaves, ideal for bright indoor spaces.",
+    "image": "https://i.postimg.cc/rubber-plant.png",
+    "providerName": "Tropical Trends"
+  }
+]
