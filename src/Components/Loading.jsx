@@ -1,14 +1,10 @@
 import React from "react";
-import { ClipLoader, FadeLoader, MoonLoader, RingLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 const Loading = () => {
   return (
-    <div>
-      <h2>Loading...</h2>
-      <RingLoader />
-      <MoonLoader />
+    <div className="h-screen flex flex-col justify-center items-center transition-opacity duration-300">
       <FadeLoader />
-      <ClipLoader />
     </div>
   );
 };
