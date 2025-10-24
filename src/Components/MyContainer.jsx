@@ -1,11 +1,7 @@
 import React from "react";
 
 const MyContainer = ({ className, children }) => {
-  return (
-    <div className={`${className} container mx-auto px-5 md:px-20`}>
-      {children}
-    </div>
-  );
+  return <div className={`${className} container mx-auto`}>{children}</div>;
 };
 
 export default MyContainer;
