@@ -5,6 +5,7 @@ import MyLink from "./MyLink";
 import { AuthContext } from "../Context/AuthContext";
 import { MoonLoader } from "react-spinners";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { user, loading, logout } = useContext(AuthContext);
@@ -23,23 +24,37 @@ const Navbar = () => {
   return (
     <div className="bg-[#C2E2FA] py-2 border-b border-b-gray-200">
       <MyContainer className="flex items-center justify-between md:flex-row space-y-2.5 flex-col px-5 md:px-20">
-        <Link
-          to="/"
-          className="text-xl my-0 md:text-2xl font-semibold text-purple-500"
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 1 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className=""
         >
-          Green Nest
-        </Link>
-        <ul className="flex justify-center items-center gap-2.5">
-          <li>
+          <Link
+            to="/"
+            className="text-xl my-0 md:text-2xl font-semibold text-purple-500"
+          >
+            Green Nest
+          </Link>
+        </motion.div>
+        <motion.ul
+          initial={{ opacity: 0, y: 40, scale: 1 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1.1 }}
+          transition={{ direction: 0.6, scale: 1.1 }}
+          className="flex justify-center items-center gap-2.5"
+        >
+          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <MyLink to={"/"}>Home</MyLink>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <MyLink to={"/plants"}>Plants</MyLink>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <MyLink to={"/profile"}>Profile</MyLink>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
 
         {loading ? (
           <MoonLoader size={32} color="#3ff443" />
@@ -61,22 +76,38 @@ const Navbar = () => {
               <p className="text-sm md:text-md font-medium text-gray-600">
                 {user?.email}
               </p>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={handleSignout}
                 className="btn btn-error btn-sm mt-2 text-cyan-800 hover:text-cyan-200/60"
               >
                 Sign Out
-              </button>
+              </motion.button>
             </div>
           </div>
         ) : (
           <div className="space-x-5">
-            <button className="btn btn-ghost bg-purple-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="btn btn-ghost bg-purple-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer"
+            >
               <Link to={"/login"}>Login</Link>
-            </button>
-            <button className="btn btn-ghost bg-purple-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">
+            </motion.button>
+            <motion.button
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="btn btn-ghost bg-purple-500 text-white px-4 py-2 rounded-md font-semibold cursor-pointer"
+            >
               <Link to={"/register"}>Register</Link>
-            </button>
+            </motion.button>
           </div>
         )}
       </MyContainer>
