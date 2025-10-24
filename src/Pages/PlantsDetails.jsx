@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import MyContainer from "../Components/MyContainer";
 import { AuthContext } from "../Context/AuthContext";
 import Loading from "../Components/Loading";
+import { motion } from "framer-motion";
 
 const PlantsDetails = () => {
   const { error, setError, loading } = useContext(AuthContext);
@@ -67,15 +68,24 @@ const PlantsDetails = () => {
       <MyContainer className="px-5 py-8 md:px-20">
         <title>Plant Details</title>
         <div className="w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-gray-100 rounded-2xl shadow-md bg-base-100">
-          <figure>
+          <motion.figure
+            transition={{ duration: 0.6, x: 0 }}
+            initial={{ scale: 0.8, opacity: 0, x: -200 }}
+            whileInView={{ scale: 1, opacity: 1, x: 0 }}
+          >
             <img
               src={image}
               alt={plantName}
               className="w-full h-[65vh] object-cover object-center rounded-xl"
             />
-          </figure>
+          </motion.figure>
 
-          <div className="flex flex-col justify-center gap-6">
+          <motion.div
+            transition={{ duration: 0.6, x: 0 }}
+            initial={{ scale: 0.8, opacity: 0, x: 200 }}
+            whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            className="flex flex-col justify-center gap-6"
+          >
             <div className="space-y-3 text-base md:text-lg">
               <div className="flex justify-between">
                 <p>
@@ -133,10 +143,15 @@ const PlantsDetails = () => {
             >
               Go Back
             </Link>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex justify-center mt-10 mb-7">
+        <motion.div
+          transition={{ duration: 0.6, y: 0 }}
+          initial={{ scale: 0.8, opacity: 0, y: 200 }}
+          whileInView={{ scale: 1, opacity: 1, y: 0 }}
+          className="flex justify-center mt-10 mb-7"
+        >
           <form
             onSubmit={handleBook}
             className="flex flex-col gap-4 w-full max-w-md p-6 rounded-xl bg-base-200 shadow-md border border-gray-100"
@@ -174,7 +189,7 @@ const PlantsDetails = () => {
               </p>
             )}
           </form>
-        </div>
+        </motion.div>
       </MyContainer>
     </div>
   );
