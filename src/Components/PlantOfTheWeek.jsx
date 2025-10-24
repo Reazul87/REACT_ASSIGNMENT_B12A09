@@ -36,7 +36,8 @@ const PlantOfTheWeek = () => {
       <motion.h2
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, scale: 1.05 }}
+        whileHover={{ scale: 1.05 }}
         className="text-2xl text-center md:text-4xl font-bold text-emerald-700 mb-4"
       >
         Plant of the Week

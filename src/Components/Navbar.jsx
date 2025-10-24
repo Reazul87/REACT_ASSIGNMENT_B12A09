@@ -27,7 +27,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 1 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, scale: 0.9 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className=""

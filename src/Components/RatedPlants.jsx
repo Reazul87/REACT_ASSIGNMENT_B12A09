@@ -36,7 +36,8 @@ const RatedPlants = () => {
       <motion.h2
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, scale: 1.05 }}
+        whileHover={{ scale: 1.05 }}
         className="text-2xl md:text-4xl font-bold text-center text-emerald-700 mb-5"
       >
         Top Rated Indoor Plants
@@ -59,16 +60,10 @@ const RatedPlants = () => {
           }}
           modules={[Pagination, Navigation, Autoplay]}
         >
-          {topPlant.map((plant, i) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
-            >
-              <SwiperSlide key={plant.plantId}>
-                <PlantsCard plant={plant}></PlantsCard>
-              </SwiperSlide>
-            </motion.div>
+          {topPlant.map((plant) => (
+            <SwiperSlide key={plant.plantId}>
+              <PlantsCard plant={plant}></PlantsCard>
+            </SwiperSlide>
           ))}
         </Swiper>
       </motion.div>

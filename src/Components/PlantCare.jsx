@@ -13,7 +13,8 @@ const PlantCare = () => {
       <motion.h4
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6, scale: 1.05 }}
+        whileHover={{ scale: 1.05 }}
         className="text-center text-2xl md:text-4xl font-bold text-emerald-700 "
       >
         Plant Care Tips
@@ -22,7 +23,8 @@ const PlantCare = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, scale: 1 }}
+          whileHover={{ scale: 1.06 }}
           className="flex gap-2.5 flex-row items-center card-body p-2.5 border border-gray-50 shadow"
         >
           <img
@@ -31,10 +33,22 @@ const PlantCare = () => {
             className="h-15 w-15"
           />
           <div className="">
-            <h2 className="font-bold text-lg">Watering</h2>
-            <p className="text-black/70">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9, x: 25 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.5, scale: 1, x: 0 }}
+              className="font-bold text-lg"
+            >
+              Watering
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9, y: -25 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              className="text-black/70"
+            >
               Water plants when the top inch or so of soil is dry
-            </p>
+            </motion.p>
           </div>
         </motion.div>
         <motion.div
@@ -49,10 +63,22 @@ const PlantCare = () => {
             className="h-15 w-15"
           />
           <div className="">
-            <h2 className="font-bold text-lg">Sunlight</h2>
-            <p className="text-black/70">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9, x: 25 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.5, scale: 1, x: 0 }}
+              className="font-bold text-lg"
+            >
+              Sunlight
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9, y: -25 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              className="text-black/70"
+            >
               Most indoor plants thrive in bright, indirect light
-            </p>
+            </motion.p>
           </div>
         </motion.div>
         <motion.div
@@ -67,10 +93,22 @@ const PlantCare = () => {
             className="h-15 w-15"
           />
           <div className="">
-            <h2 className="font-bold text-lg">Fertilizing</h2>
-            <p className="text-black/70">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.9, x: 25 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.5, scale: 1, x: 0 }}
+              className="font-bold text-lg"
+            >
+              Fertilizing
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.9, y: -25 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              className="text-black/70"
+            >
               Feed plants with balanced, water-soluble fertilizer
-            </p>
+            </motion.p>
           </div>
         </motion.div>
       </div>

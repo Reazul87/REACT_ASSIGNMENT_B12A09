@@ -22,24 +22,36 @@ const Home = () => {
         <div className="hero-content text-pink-300">
           <div className="">
             <motion.h1
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              whileInView={{ scale: 1, opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, scale: 1.05 }}
               className="mb-5 text-2xl md:text-5xl font-bold"
             >
               Bring Nature Indoors
             </motion.h1>
             <motion.p
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.05 }}
+              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              whileInView={{ scale: 1, opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, scale: 1.05, delay: 0.1 }}
               className="mb-5 font-medium"
             >
               Enhance your living space with plants
             </motion.p>
-            <Link to={"/plants"} className="btn btn-sm md:btn-md btn-secondary">
-              Shop Now
-            </Link>
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              transition={{ duration: 0.4, delay: 0.2, scale: 0.9 }}
+              whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            >
+              <Link
+                to={"/plants"}
+                className="btn btn-sm md:btn-md btn-secondary"
+              >
+                Shop Now
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
