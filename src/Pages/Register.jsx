@@ -1,17 +1,84 @@
-import React, { useState } from "react";
-import { Link } from "react-router";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router";
 import MyContainer from "../Components/MyContainer";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
+import { AuthContext } from "../Context/AuthContext";
+import { toast } from "react-toastify";
+import Loading from "../Components/Loading";
 
 const Register = () => {
-  const [show, setShow] = useState(true);
+  const {
+    error,
+    show,
+    logout,
+    setUser,
+    loading,
+    setError,
+    setShow,
+    setLoading,
+    registerUser,
+  } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    // console.log({ email, password });
+
+    if (loading) {
+      return <Loading></Loading>;
+    }
+
+    const lowerCase = /[a-z]/;
+    const upperCase = /[A-Z]/;
+    const number = /[0-9]/;
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    } else if (!lowerCase.test(password)) {
+      setError("Password must have at least one lowercase letter");
+      return;
+    } else if (!upperCase.test(password)) {
+      setError("Password must have at least one uppercase letter");
+      return;
+    } else if (!number.test(password)) {
+      setError("Password must have at least one number");
+      return;
+    } else setError("");
+
+    registerUser(email, password)
+      .then((result) => {
+        setLoading(false);
+        console.log(result.user);
+
+        // Log Out
+        logout().then(() => {
+          setLoading(false);
+          // toast.error("Signup successful check your email to verified.");
+          setUser(null);
+          navigate("/login");
+        });
+        e.target.reset();
+        toast.success("Registration Successful");
+      })
+      .catch((e) => {
+        setLoading(false);
+        console.log(e.code);
+        if (e.code == "auth/email-already-in-use") {
+          toast.error("Already have an account , provide new email");
+          return;
+        }
+      });
+  };
 
   return (
     <div className="min-h-[96vh] flex items-center justify-center bg-gradient-to-tr from-cyan-500 via-purple-600 to-pink-500 relative overflow-hidden">
       <title>Register</title>
 
-      <MyContainer>
+      <MyContainer className="md:px-20">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-5 lg:p-10 text-white">
           <div className="max-w-lg text-center lg:text-left">
             <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
@@ -28,7 +95,7 @@ const Register = () => {
               Sign Up
             </h2>
 
-            <form className="space-y-4">
+            <form onSubmit={handleRegister} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium mb-1">
                   Your Name
@@ -38,7 +105,7 @@ const Register = () => {
                   type="text"
                   name="name"
                   placeholder="Your profile name"
-                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
                 />
               </div>
 
@@ -50,17 +117,18 @@ const Register = () => {
                   type="text"
                   name="photo"
                   placeholder="Your photo url here"
-                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium mb-1">Email</label>
                 <input
+                  required
                   type="email"
                   name="email"
                   placeholder="example@email.com"
-                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
                 />
               </div>
 
@@ -69,17 +137,25 @@ const Register = () => {
                   Password
                 </label>
                 <input
+                  required
                   type={show ? "text" : "password"}
                   name="password"
                   placeholder="••••••••"
-                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                  className="input input-bordered w-full bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
                 />
                 <span
                   onClick={() => setShow(!show)}
                   className="absolute right-2 top-9 cursor-pointer z-50"
                 >
-                  {!show ? <FaEye /> : <IoEyeOff />}
+                  {!show ? (
+                    <IoEyeOff color="#000080" />
+                  ) : (
+                    <FaEye color="#000080" />
+                  )}
                 </span>
+              </div>
+              <div className="">
+                <p className="text-sm font-medium text-orange-800">{error}</p>
               </div>
 
               <button type="submit" className="my-btn">
