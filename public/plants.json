@@ -7,7 +7,7 @@
     "rating": 4.8,
     "availableStock": 10,
     "careLevel": "Easy",
-    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "description": "Snake Plant, or Mother-in-Law’s Tongue, is a resilient indoor plant with tall, sword-shaped leaves. Thriving in low light with minimal watering, it’s perfect for beginners. This air purifier removes toxins like formaldehyde, adding modern elegance and clean air to any room with little care.",
     "image": "https://i.pinimg.com/1200x/3f/4f/9c/3f4f9ca9a5751853219f31d9bbe34d94.jpg",
     "providerName": "UrbanGreen Studio"
   },
@@ -19,7 +19,7 @@
     "rating": 4.5,
     "availableStock": 15,
     "careLevel": "Easy",
-    "description": "A fast-growing vine with heart-shaped leaves, perfect for beginners.",
+    "description": "Pothos, with heart-shaped leaves, is a versatile trailing plant ideal for hanging baskets. Adapting to low or bright indirect light, it needs occasional watering. Purifying air by removing xylene, its fast growth and forgiving nature bring fresh charm to homes or offices effortlessly.",
     "image": "http://i.pinimg.com/1200x/9b/e6/2e/9be62e0f7283b56309c9cecef2fb0603.jpg",
     "providerName": "Leafy Haven"
   },
@@ -31,7 +31,7 @@
     "rating": 4.7,
     "availableStock": 8,
     "careLevel": "Moderate",
-    "description": "Known for its iconic split leaves, this plant adds a tropical vibe.",
+    "description": "Monstera Deliciosa, the Swiss Cheese Plant, boasts dramatic split leaves. Thriving in bright, indirect light with moderate care, its glossy foliage creates a tropical vibe. Symbolizing vitality, this fast-growing statement piece adds lush greenery and jungle-like charm to indoor spaces.",
     "image": "https://i.pinimg.com/1200x/48/be/3d/48be3dfa3564a980b6f9d6c72a94f48a.jpg",
     "providerName": "Tropical Trends"
   },
@@ -43,7 +43,7 @@
     "rating": 4.6,
     "availableStock": 12,
     "careLevel": "Easy",
-    "description": "A resilient plant with glossy leaves that tolerates neglect and low light.",
+    "description": "ZZ Plant features shiny, dark green leaves and thrives in low light with minimal water. Storing moisture in rhizomes, it’s ideal for offices. This air purifier adds a polished, stress-free elegance to modern interiors with its slow, steady growth and glossy foliage.",
     "image": "https://i.pinimg.com/1200x/a4/4e/d3/a44ed3fa1d80a2fb5c5e0cd83c976d70.jpg",
     "providerName": "UrbanGreen Studio"
   },
@@ -55,7 +55,7 @@
     "rating": 4.4,
     "availableStock": 9,
     "careLevel": "Moderate",
-    "description": "Features elegant white blooms and thrives in shady indoor spaces.",
+    "description": "Peace Lily, with white blooms and deep green leaves, thrives in low to moderate light. Requiring moist soil, it purifies air by removing ammonia. Symbolizing peace, it adds serene elegance to homes or offices with regular watering and minimal care.",
     "image": "https://i.pinimg.com/1200x/c9/1e/12/c91e1255d16fd4b5f6f8726e496dee21.jpg",
     "providerName": "Bloom Boutique"
   },
@@ -67,7 +67,7 @@
     "rating": 4.3,
     "availableStock": 5,
     "careLevel": "High",
-    "description": "A trendy plant with large, violin-shaped leaves that requires bright light.",
+    "description": "Fiddle Leaf Fig, with large violin-shaped leaves, loves bright, filtered light and consistent moisture. Demanding but rewarding, it’s a stunning centerpiece for living rooms or offices, adding height, sophistication, and vibrant green elegance to modern interiors with dedicated care.",
     "image": "https://i.pinimg.com/1200x/1d/32/24/1d3224f024a8801193a26b2800ba9b8f.jpg",
     "providerName": "Tropical Trends"
   },
@@ -79,7 +79,7 @@
     "rating": 4.6,
     "availableStock": 20,
     "careLevel": "Easy",
-    "description": "A versatile plant with arching green and white leaves, great for hanging baskets.",
+    "description": "Spider Plant, with green-and-white striped leaves, thrives in varied light and needs minimal watering. Producing propagatable spiderettes, it purifies air by removing pollutants. Nearly indestructible, it adds freshness and charm to homes or offices with ease.",
     "image": "https://i.pinimg.com/736x/af/3e/01/af3e015fa15126f31df882016cfea434.jpg",
     "providerName": "Leafy Haven"
   },
@@ -91,7 +91,7 @@
     "rating": 4.2,
     "availableStock": 18,
     "careLevel": "Easy",
-    "description": "A medicinal plant with thick, fleshy leaves that thrives in bright light.",
+    "description": "Aloe Vera, a low-maintenance succulent, has fleshy leaves with healing gel for burns. Thriving in bright sunlight with infrequent watering, it adds texture and purifies air. Ideal for windowsills, it brings calming aesthetics to indoor spaces effortlessly.",
     "image": "https://i.pinimg.com/1200x/ce/f7/ab/cef7ab03b6109480c7c602088bfecd3c.jpg",
     "providerName": "Desert Blooms"
   },
@@ -103,7 +103,7 @@
     "rating": 4.5,
     "availableStock": 7,
     "careLevel": "Moderate",
-    "description": "A lush plant with glossy, heart-shaped leaves that adapts to various light conditions.",
+    "description": "Philodendrons, with glossy heart-shaped leaves, thrive in bright, indirect light but adapt to shade. Ideal for shelves, they create a tropical cascade. Needing moist soil and misting, they purify air and add vibrant, calming greenery to modern interiors.",
     "image": "https://i.pinimg.com/1200x/87/4a/fd/874afd8f8e1f7167262fd939f0b57e81.jpg",
     "providerName": "Bloom Boutique"
   },
@@ -115,7 +115,7 @@
     "rating": 4.4,
     "availableStock": 6,
     "careLevel": "Moderate",
-    "description": "A striking plant with large, dark green leaves, ideal for bright indoor spaces.",
+    "description": "Rubber Plant, with glossy, rich green leaves, thrives in bright, indirect light. Growing quickly, it fills corners beautifully and purifies air. Regular leaf cleaning maintains its shine, adding dramatic, stylish elegance to modern homes or workspaces.",
     "image": "https://i.pinimg.com/1200x/d2/93/a9/d293a9e7b85cce60533a76c109fd441e.jpg",
     "providerName": "Tropical Trends"
   }
