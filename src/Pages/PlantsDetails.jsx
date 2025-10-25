@@ -69,9 +69,9 @@ const PlantsDetails = () => {
         <title>Plant Details</title>
         <div className="w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-gray-100 rounded-2xl shadow-md bg-base-100">
           <motion.figure
-            transition={{ duration: 0.6, x: 0 }}
-            initial={{ scale: 0.8, opacity: 0, x: -200 }}
+            initial={{ scale: 0.8, opacity: 0, x: -50 }}
             whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, x: 0 }}
           >
             <img
               src={image}
@@ -81,9 +81,9 @@ const PlantsDetails = () => {
           </motion.figure>
 
           <motion.div
-            transition={{ duration: 0.6, x: 0 }}
-            initial={{ scale: 0.8, opacity: 0, x: 200 }}
+            initial={{ scale: 0.8, opacity: 0, x: 50 }}
             whileInView={{ scale: 1, opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, x: 0 }}
             className="flex flex-col justify-center gap-6"
           >
             <div className="space-y-3 text-base md:text-lg">
@@ -147,9 +147,9 @@ const PlantsDetails = () => {
         </div>
 
         <motion.div
-          transition={{ duration: 0.6, y: 0 }}
-          initial={{ scale: 0.8, opacity: 0, y: 200 }}
+          initial={{ scale: 0.8, opacity: 0, y: 50 }}
           whileInView={{ scale: 1, opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, y: 0 }}
           className="flex justify-center mt-10 mb-7"
         >
           <form

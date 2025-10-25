@@ -3,6 +3,7 @@ import MyContainer from "../Components/MyContainer";
 import { AuthContext } from "../Context/AuthContext";
 import { toast } from "react-toastify";
 import { auth } from "../Firebase/firebase.init";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   const { profileUpdate, user, setUser, setError, error } =
@@ -101,9 +102,17 @@ const Profile = () => {
                 />
               </div>
 
-              <button type="submit" className="my-btn">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+                type="submit"
+                className="my-btn"
+              >
                 Update
-              </button>
+              </motion.button>
             </form>
           </div>
         </div>

@@ -34,7 +34,7 @@ const Navbar = () => {
         >
           <Link
             to="/"
-            className="text-xl my-0 md:text-2xl font-semibold text-purple-500"
+            className="text-xl my-0 md:text-2xl font-semibold text-emerald-700"
           >
             Green Nest
           </Link>
@@ -68,16 +68,33 @@ const Navbar = () => {
             </div>
             <div
               tabIndex={0}
-              className="dropdown-content z-[20] w-52 top-8 -right-20 md:top-10 md:right-0 menu shadow bg-base-100 rounded-box p-2.5 bg-base-300"
+              className="dropdown-content z-[20] w-52 top-8 -right-21 md:top-10 md:right-0 menu shadow bg-base-100 rounded-box p-2.5 bg-base-300"
             >
-              <h2 className="font-semibold mb-0.5 md:text-lg">
+              <motion.h2
+                initial={{ opacity: 0, y: 40, scale: 1 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="font-semibold mb-0.5 md:text-lg"
+              >
                 {user?.displayName || "Unknown User"}
-              </h2>
-              <p className="text-sm md:text-md font-medium text-gray-600">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, x: 40, y: -40, scale: 1 }}
+                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                transition={{ duration: 0.3, scale: 0.9, delay: 0.12 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-sm md:text-md font-medium text-gray-600"
+              >
                 {user?.email}
-              </p>
+              </motion.p>
               <motion.button
-                whileHover={{ scale: 1.1 }}
+                initial={{ opacity: 0, x: 50, y: -40, scale: 1 }}
+                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                transition={{ duration: 0.3, scale: 0.9, delay: 0.2 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={handleSignout}
                 className="btn btn-error btn-sm mt-2 text-cyan-800 hover:text-cyan-200/60"

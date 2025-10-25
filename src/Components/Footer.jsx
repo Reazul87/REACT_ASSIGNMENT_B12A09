@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router";
 import MyContainer from "./MyContainer";
+import { motion } from "framer-motion";
+
 const Footer = () => {
   return (
     <div className="bg-[#16476A] text-neutral p-8">
       <MyContainer className="px-5 md:px-20">
-        <nav className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <motion.nav
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-5"
+        >
           <div className="flex flex-col">
             <p className="text-white/75 font-bold text-lg mb-2">Company</p>
             <Link className="text-sm text-white/75">About us</Link>
@@ -30,13 +37,18 @@ const Footer = () => {
             <Link className="text-sm text-white/75">iPhone</Link>
             <Link className="text-sm text-white/75">Windows</Link>
           </div>
-        </nav>
-        <aside className="mt-5 px-3">
+        </motion.nav>
+        <motion.aside
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ delay: 0.1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mt-5 px-3"
+        >
           <p className="text-center text-sm font-medium text-white/80">
             Copyright - © {new Date().getFullYear()} GreenNest. All rights
             reserved
           </p>
-        </aside>
+        </motion.aside>
       </MyContainer>
     </div>
   );

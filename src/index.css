@@ -2,5 +2,5 @@
 @plugin "daisyui";
 
 .my-btn {
-  @apply btn w-full bg-gradient-to-r from-purple-600 via-indigo-500 to-pink-400 text-white font-semibold border-none hover:scale-105 transition-transform duration-200;
+  @apply btn w-full bg-gradient-to-r from-purple-600 via-indigo-500 to-pink-400 text-white font-semibold border-none;
 }

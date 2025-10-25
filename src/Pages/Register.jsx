@@ -6,6 +6,7 @@ import { IoEyeOff } from "react-icons/io5";
 import { AuthContext } from "../Context/AuthContext";
 import { toast } from "react-toastify";
 import Loading from "../Components/Loading";
+import { motion } from "framer-motion";
 
 const Register = () => {
   const {
@@ -57,7 +58,6 @@ const Register = () => {
         // Log Out
         logout().then(() => {
           setLoading(false);
-          // toast.error("Signup successful check your email to verified.");
           setUser(null);
           navigate("/login");
         });
@@ -80,7 +80,12 @@ const Register = () => {
 
       <MyContainer className="md:px-20">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-5 lg:p-10 text-white">
-          <div className="max-w-lg text-center lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, x: 0 }}
+            className="max-w-lg text-center lg:text-left"
+          >
             <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
               Create Your Account
             </h1>
@@ -88,9 +93,14 @@ const Register = () => {
               Join our community and unlock exclusive features. Your journey
               begins here!
             </p>
-          </div>
+          </motion.div>
 
-          <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-5 md:p-8">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, x: 0 }}
+            className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-5 md:p-8"
+          >
             <h2 className="text-xl md:text-2xl font-semibold mb-6 text-center text-white">
               Sign Up
             </h2>
@@ -158,9 +168,17 @@ const Register = () => {
                 <p className="text-sm font-medium text-orange-800">{error}</p>
               </div>
 
-              <button type="submit" className="my-btn">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                type="submit"
+                className="my-btn"
+              >
                 Register
-              </button>
+              </motion.button>
 
               <div className="text-center mt-3">
                 <p className="text-sm text-white/80">
@@ -174,7 +192,7 @@ const Register = () => {
                 </p>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </MyContainer>
     </div>

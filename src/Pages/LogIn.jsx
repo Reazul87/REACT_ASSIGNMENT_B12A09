@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { AuthContext } from "../Context/AuthContext";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const LogIn = () => {
   const {
@@ -76,7 +77,12 @@ const LogIn = () => {
       <title>Login</title>
       <MyContainer className="md:px-20">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-5 lg:p-10 text-white">
-          <div className="max-w-lg text-center lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, y: 0 }}
+            className="max-w-lg text-center lg:text-left"
+          >
             <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
               Welcome Back
             </h1>
@@ -84,9 +90,14 @@ const LogIn = () => {
               Sign in to continue your journey. Manage your account, explore new
               features, and more.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-5 md:p-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, y: 0 }}
+            className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-5 md:p-8"
+          >
             <form onSubmit={handleLogin} className="space-y-4">
               <h2 className="text-xl md:text-2xl font-semibold mb-2 text-center text-white">
                 Login
@@ -133,9 +144,17 @@ const LogIn = () => {
                 Forget Password ?
               </button>
 
-              <button type="submit" className="my-btn">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                type="submit"
+                className="my-btn"
+              >
                 Login
-              </button>
+              </motion.button>
 
               <div className="flex items-center justify-center gap-2 mb-2">
                 <div className="h-px w-25 bg-white/30"></div>
@@ -143,7 +162,12 @@ const LogIn = () => {
                 <div className="h-px w-25 bg-white/30"></div>
               </div>
 
-              <button
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={handleGoogle}
                 type="button"
                 className="flex items-center justify-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 hover:text-white/75 transition-colors cursor-pointer"
@@ -154,7 +178,7 @@ const LogIn = () => {
                   className="w-5 h-5"
                 />
                 Continue with Google
-              </button>
+              </motion.button>
 
               <p className="text-center text-sm text-white/80 mt-3">
                 Don’t have an account?{" "}
@@ -166,7 +190,7 @@ const LogIn = () => {
                 </Link>
               </p>
             </form>
-          </div>
+          </motion.div>
         </div>
       </MyContainer>
     </div>

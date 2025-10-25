@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 
 const PlantsCard = ({ plant }) => {
   const { plantName, plantId, image, rating, price } = plant;
-  motion;
 
   return (
     <motion.div
