@@ -56,9 +56,8 @@ const PlantsDetails = () => {
     if (!emailPattern.test(email)) {
       setError("Please enter a valid email");
       return;
-    }
+    } else setError("");
 
-    setError("");
     toast.success("Booking Successful!");
     e.target.reset();
   };
@@ -67,25 +66,16 @@ const PlantsDetails = () => {
     <div className="bg-[#B4DEBD]">
       <MyContainer className="px-5 py-8 md:px-20">
         <title>Plant Details</title>
-        <div className="w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-gray-100 rounded-2xl shadow-md bg-base-100">
-          <motion.figure
-            initial={{ scale: 0.8, opacity: 0, x: -50 }}
-            whileInView={{ scale: 1, opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, x: 0 }}
-          >
+        <div className="w-full p-6 flex md:flex-row flex-col gap-8 border border-gray-100 rounded-2xl shadow-md bg-base-100">
+          <figure className="flex-1">
             <img
               src={image}
               alt={plantName}
               className="w-full h-[65vh] object-cover object-center rounded-xl"
             />
-          </motion.figure>
+          </figure>
 
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0, x: 50 }}
-            whileInView={{ scale: 1, opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, x: 0 }}
-            className="flex flex-col justify-center gap-6"
-          >
+          <div className="flex flex-1 flex-col justify-center gap-6">
             <div className="space-y-3 text-base md:text-lg">
               <div className="flex justify-between">
                 <p>
@@ -143,7 +133,7 @@ const PlantsDetails = () => {
             >
               Go Back
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         <motion.div
