@@ -23,7 +23,7 @@ const Home = () => {
           <div className="">
             <motion.h1
               whileHover={{ scale: 1.05 }}
-              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              initial={{ scale: 0.8, opacity: 0, x: 50 }}
               transition={{ duration: 0.4, scale: 1.05 }}
               whileInView={{ scale: 1, opacity: 1, x: 0 }}
               className="mb-5 text-2xl md:text-5xl font-bold"
@@ -32,7 +32,7 @@ const Home = () => {
             </motion.h1>
             <motion.p
               whileHover={{ scale: 1.05 }}
-              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              initial={{ scale: 0.8, opacity: 0, x: 50 }}
               whileInView={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.4, scale: 1.05, delay: 0.1 }}
               className="mb-5 font-medium"
@@ -40,7 +40,7 @@ const Home = () => {
               Enhance your living space with plants
             </motion.p>
             <motion.div
-              initial={{ scale: 0.8, opacity: 0, x: 200 }}
+              initial={{ scale: 0.8, opacity: 0, x: 50 }}
               whileInView={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.2, scale: 0.9 }}
               whileHover={{ scale: 1.05 }}

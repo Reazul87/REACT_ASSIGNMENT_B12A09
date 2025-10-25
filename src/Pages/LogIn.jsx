@@ -78,9 +78,9 @@ const LogIn = () => {
       <MyContainer className="md:px-20">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 p-5 lg:p-10 text-white">
           <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, y: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.2, x: 0 }}
             className="max-w-lg text-center lg:text-left"
           >
             <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg">
