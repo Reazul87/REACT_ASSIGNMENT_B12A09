@@ -21,7 +21,7 @@ const PlantCare = () => {
       </motion.h4>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, scale: 1 }}
           whileHover={{ scale: 1.06 }}
@@ -32,7 +32,7 @@ const PlantCare = () => {
             alt="garden"
             className="h-15 w-15"
           />
-          <div className="">
+          <div>
             <motion.h2
               initial={{ opacity: 0, scale: 0.9, x: 25 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -44,7 +44,7 @@ const PlantCare = () => {
             <motion.p
               initial={{ opacity: 0, scale: 0.9, y: -25 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              transition={{ delay: 0.2, scale: 1, y: 0 }}
               className="text-black/70"
             >
               Water plants when the top inch or so of soil is dry
@@ -52,9 +52,10 @@ const PlantCare = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, scale: 1 }}
+          whileHover={{ scale: 1.06 }}
           className="flex gap-2.5 flex-row items-center card-body p-2.5 border border-gray-50 shadow"
         >
           <img
@@ -62,7 +63,7 @@ const PlantCare = () => {
             alt="sun"
             className="h-15 w-15"
           />
-          <div className="">
+          <div>
             <motion.h2
               initial={{ opacity: 0, scale: 0.9, x: 25 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -74,7 +75,7 @@ const PlantCare = () => {
             <motion.p
               initial={{ opacity: 0, scale: 0.9, y: -25 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              transition={{ delay: 0.2, scale: 1, y: 0 }}
               className="text-black/70"
             >
               Most indoor plants thrive in bright, indirect light
@@ -82,9 +83,10 @@ const PlantCare = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, scale: 1 }}
+          whileHover={{ scale: 1.06 }}
           className="flex gap-2.5 flex-row items-center card-body p-2.5 border border-gray-50 shadow"
         >
           <img
@@ -92,7 +94,7 @@ const PlantCare = () => {
             alt="external-fertilizer-farming-and-agriculture-wanicon-lineal-color-wanicon"
             className="h-15 w-15"
           />
-          <div className="">
+          <div>
             <motion.h2
               initial={{ opacity: 0, scale: 0.9, x: 25 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -104,7 +106,7 @@ const PlantCare = () => {
             <motion.p
               initial={{ opacity: 0, scale: 0.9, y: -25 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2, scale: 1, y: 0 }}
+              transition={{ delay: 0.2, scale: 1, y: 0 }}
               className="text-black/70"
             >
               Feed plants with balanced, water-soluble fertilizer

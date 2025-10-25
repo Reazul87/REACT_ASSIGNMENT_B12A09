@@ -20,7 +20,7 @@ const Home = () => {
         <title>Home</title>
         <div className="hero-overlay"></div>
         <div className="hero-content text-pink-300">
-          <div className="">
+          <div>
             <motion.h1
               whileHover={{ scale: 1.05 }}
               initial={{ scale: 0.8, opacity: 0, x: 50 }}

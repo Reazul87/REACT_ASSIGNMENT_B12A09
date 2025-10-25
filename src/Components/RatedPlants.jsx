@@ -1,18 +1,12 @@
-import React, { useContext } from "react"; // <-- ADDED useRef, useEffect
+import React, { useContext } from "react";
 import PlantsCard from "./PlantsCard";
 import { AuthContext } from "../Context/AuthContext";
 import Loading from "./Loading";
 import { useLoaderData } from "react-router";
-
-// 1. Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// 2. Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// 3. Import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 

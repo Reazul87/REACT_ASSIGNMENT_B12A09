@@ -30,10 +30,9 @@ const Navbar = () => {
           transition={{ duration: 0.5, scale: 0.9 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className=""
         >
           <Link
-            to="/"
+            to={"/"}
             className="text-xl my-0 md:text-2xl font-semibold text-emerald-700"
           >
             Green Nest

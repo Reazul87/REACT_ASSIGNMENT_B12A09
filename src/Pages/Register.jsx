@@ -26,17 +26,20 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log({ email, password });
 
     if (loading) {
       return <Loading></Loading>;
     }
 
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const lowerCase = /[a-z]/;
     const upperCase = /[A-Z]/;
     const number = /[0-9]/;
 
-    if (password.length < 6) {
+    if (!emailPattern.test(email)) {
+      setError("Enter your valid email");
+      return;
+    } else if (password.length < 6) {
       setError("Password must be at least 6 characters long");
       return;
     } else if (!lowerCase.test(password)) {
@@ -164,7 +167,7 @@ const Register = () => {
                   )}
                 </span>
               </div>
-              <div className="">
+              <div>
                 <p className="text-sm font-medium text-orange-800">{error}</p>
               </div>
 
@@ -184,7 +187,7 @@ const Register = () => {
                 <p className="text-sm text-white/80">
                   Already have an account?{" "}
                   <Link
-                    to="/login"
+                    to={"/login"}
                     className="text-pink-300 hover:text-white font-medium underline"
                   >
                     Login

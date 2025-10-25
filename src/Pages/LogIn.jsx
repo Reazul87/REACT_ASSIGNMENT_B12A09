@@ -13,6 +13,8 @@ const LogIn = () => {
     setUser,
     setShow,
     login,
+    error,
+    setError,
     googleLogin,
     changePassword,
     setLoading,
@@ -25,7 +27,24 @@ const LogIn = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log({ email, password });
+
+    const lowerCase = /[a-z]/;
+    const upperCase = /[A-Z]/;
+    const number = /[0-9]/;
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    } else if (!lowerCase.test(password)) {
+      setError("Password must have at least one lowercase letter");
+      return;
+    } else if (!upperCase.test(password)) {
+      setError("Password must have at least one uppercase letter");
+      return;
+    } else if (!number.test(password)) {
+      setError("Password must have at least one number");
+      return;
+    } else setError("");
 
     login(email, password)
       .then((result) => {
@@ -61,6 +80,15 @@ const LogIn = () => {
 
   const handlePassword = () => {
     const email = emailRef.current.value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!email) {
+      toast.error("Enter your email to reset password");
+      return;
+    } else if (!emailPattern.test(email)) {
+      toast.error("Enter your valid email to reset password");
+      return;
+    }
 
     changePassword(email)
       .then(() => {
@@ -135,6 +163,9 @@ const LogIn = () => {
                   )}
                 </span>
               </div>
+              <div>
+                <p className="text-sm font-medium text-orange-800">{error}</p>
+              </div>
 
               <button
                 onClick={handlePassword}
@@ -157,9 +188,9 @@ const LogIn = () => {
               </motion.button>
 
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="h-px w-25 bg-white/30"></div>
+                <div className="h-px w-30 bg-white/30"></div>
                 <span className="text-sm text-white/70">or</span>
-                <div className="h-px w-25 bg-white/30"></div>
+                <div className="h-px w-30 bg-white/30"></div>
               </div>
 
               <motion.button
@@ -183,7 +214,7 @@ const LogIn = () => {
               <p className="text-center text-sm text-white/80 mt-3">
                 Don’t have an account?{" "}
                 <Link
-                  to="/register"
+                  to={"/register"}
                   className="text-pink-300 hover:text-white underline"
                 >
                   Register

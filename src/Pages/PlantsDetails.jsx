@@ -18,16 +18,6 @@ const PlantsDetails = () => {
     return <Loading></Loading>;
   }
 
-  if (!plant) {
-    return (
-      <MyContainer>
-        <div className="text-center text-lg text-red-500 font-semibold py-20">
-          Plant not found!
-        </div>
-      </MyContainer>
-    );
-  }
-
   const {
     plantId,
     availableStock,
@@ -128,7 +118,7 @@ const PlantsDetails = () => {
             </div>
 
             <Link
-              to="/plants"
+              to={"/plants"}
               className="btn btn-accent w-fit rounded-lg text-white hover:bg-green-700 transition-all"
             >
               Go Back
