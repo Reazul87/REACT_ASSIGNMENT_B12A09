@@ -90,6 +90,8 @@ const LogIn = () => {
       return;
     }
 
+    window.open("https://mail.google.com/", "_blank");
+
     changePassword(email)
       .then(() => {
         toast.success("Check your email to reset password");

@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-  // LOGIN
+  // LOGOUT
   const logout = () => {
     return signOut(auth);
   };
