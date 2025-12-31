@@ -69,6 +69,44 @@ Each object includes:
   "providerName": "UrbanGreen Studio"
 }
 ```
+---
+{
+  "name": "green-nest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.15",
+    "firebase": "^12.4.0",
+    "framer-motion": "^12.23.24",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.9.4",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
+    "swiper": "^12.0.3",
+    "tailwindcss": "^4.1.15"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "daisyui": "^5.3.7",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
+}
 
 ---
 
@@ -80,6 +118,35 @@ Each object includes:
 - React Toastify displays real-time login/signup feedback
 
 ---
+
+⚡ Firebase Configuration (Important – Never commit real keys!)
+
+Create a .env file in the project root:
+envVITE_apiKey=your-api-key-here
+VITE_authDomain=your-project.firebaseapp.com
+VITE_projectId=your-project-id
+VITE_storageBucket=your-project.appspot.com
+VITE_messagingSenderId=your-sender-id
+VITE_appId=your-app-id
+
+Use in your code like this:
+JavaScriptconst firebaseConfig = {
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+};
+⚡ How to Run Locally
+
+Clone the repositoryBashgit clone https://github.com/Reazul87/REACT_ASSIGNMENT_B12A09.git
+cd REACT_ASSIGNMENT_B12A09
+Install dependenciesBashnpm install
+Create .env file with your Firebase config (see above)
+Start the development serverBashnpm run dev
+Open http://localhost:5173 (or the port shown in the terminal)
+
 
 ## 🧑‍💻 Author
 
