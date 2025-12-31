@@ -3,7 +3,7 @@
 **Green Nest** is a modern plant-store web app built with **React 19**, **Vite**, **Firebase Auth**, and **Tailwind CSS 4**.  
 It offers a smooth and responsive shopping experience for indoor-plant lovers — featuring authentication, dynamic plant listings, animated UI, and clean design.
 
-![Hero Banner](/public/hero.jpg)
+![Hero Banner](green-nest-screenshort.png)
 
 ---
 
