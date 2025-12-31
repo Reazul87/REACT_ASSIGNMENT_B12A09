@@ -9,9 +9,6 @@ It offers a smooth and responsive shopping experience for indoor-plant lovers �
 - **[Netlify](https://green-nest-org.netlify.app/)**
 - **[CloudFlare](https://green-nest-org.pages.dev/)**
 
-## 💻 Repository
-🔗 **[GitHub](https://github.com/Reazul87/REACT_ASSIGNMENT_B12A09)**
-
 ## 🧩 Core Features
 - 🔐 **Firebase Authentication** — secure sign-up, sign-in, and logout flow
 - 🌱 **Dynamic Plant Catalog** — data fetched from `plants.json` (local dataset)
