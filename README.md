@@ -5,22 +5,14 @@ It offers a smooth and responsive shopping experience for indoor-plant lovers �
 
 ![Hero Banner](green-nest-screenshort.png)
 
----
-
 ## 🚀 Live Demo
-
-🌏 **[Netlify](https://green-nest-org.netlify.app/)**
-
-🌏 **[CloudFlare](https://green-nest-org.pages.dev/)**
+- **[Netlify](https://green-nest-org.netlify.app/)**
+- **[CloudFlare](https://green-nest-org.pages.dev/)**
 
 ## 💻 Repository
-
 🔗 **[GitHub](https://github.com/Reazul87/REACT_ASSIGNMENT_B12A09)**
 
----
-
 ## 🧩 Core Features
-
 - 🔐 **Firebase Authentication** — secure sign-up, sign-in, and logout flow
 - 🌱 **Dynamic Plant Catalog** — data fetched from `plants.json` (local dataset)
 - ⭐ **Ratings & Categories** — sort or view top-rated and categorized plants
@@ -31,30 +23,21 @@ It offers a smooth and responsive shopping experience for indoor-plant lovers �
 - 🔔 **React Toastify** — instant visual feedback for actions (login, purchase, etc.)
 - ⏳ **Loading States** — handled with React Spinners
 - 📱 **Responsive UI** — optimized for all screen sizes
-- ☁️ **Deployed on Netlify**
-
----
 
 ## 🛠️ Tech Stack
-
-| Category        | Tools / Libraries                                         |
-| --------------- | --------------------------------------------------------- |
-| Frontend        | React 19, Vite 4                                          |
-| Styling         | Tailwind CSS 4                                            |
-| Animations      | Framer Motion                                             |
-| Routing         | React Router 7                                            |
-| UI Enhancements | React Icons, Swiper 12, React Toastify 11, React Spinners |
-| Backend / Auth  | Firebase 12                                               |
-| Hosting         | Netlify , CloudFlare                                      |
-
----
+| Category          | Tools / Libraries                                      |
+|-------------------|--------------------------------------------------------|
+| Frontend          | React 19, Vite 4                                       |
+| Styling           | Tailwind CSS 4                                         |
+| Animations        | Framer Motion                                          |
+| Routing           | React Router 7                                         |
+| UI Enhancements   | React Icons, Swiper 12, React Toastify 11, React Spinners |
+| Backend / Auth    | Firebase 12                                            |
+| Hosting           | Netlify, CloudFlare                                    |
 
 ## 🧮 Data Source
-
-The app uses a static dataset: [`plants.json`](/public/plants.json)
-
+The app uses a static dataset: [`plants.json`](/public/plants.json)  
 Each object includes:
-
 ```json
 {
   "plantId": 1,
@@ -70,45 +53,6 @@ Each object includes:
 }
 ```
 ---
-{
-  "name": "green-nest",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.15",
-    "firebase": "^12.4.0",
-    "framer-motion": "^12.23.24",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-icons": "^5.5.0",
-    "react-router": "^7.9.4",
-    "react-spinners": "^0.17.0",
-    "react-toastify": "^11.0.5",
-    "swiper": "^12.0.3",
-    "tailwindcss": "^4.1.15"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
-    "daisyui": "^5.3.7",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "vite": "^7.1.7"
-  }
-}
-
----
 
 ## 🔒 Authentication Flow
 
@@ -117,20 +61,12 @@ Each object includes:
 - Protected routes restrict access to certain pages
 - React Toastify displays real-time login/signup feedback
 
----
+## ⚡ Firebase Configuration (Important – Never commit real keys!)
 
-⚡ Firebase Configuration (Important – Never commit real keys!)
+ Use in your code like this:
 
-Create a .env file in the project root:
-envVITE_apiKey=your-api-key-here
-VITE_authDomain=your-project.firebaseapp.com
-VITE_projectId=your-project-id
-VITE_storageBucket=your-project.appspot.com
-VITE_messagingSenderId=your-sender-id
-VITE_appId=your-app-id
-
-Use in your code like this:
-JavaScriptconst firebaseConfig = {
+```javascript
+const firebaseConfig = {
   apiKey: import.meta.env.VITE_apiKey,
   authDomain: import.meta.env.VITE_authDomain,
   projectId: import.meta.env.VITE_projectId,
@@ -138,15 +74,51 @@ JavaScriptconst firebaseConfig = {
   messagingSenderId: import.meta.env.VITE_messagingSenderId,
   appId: import.meta.env.VITE_appId,
 };
-⚡ How to Run Locally
+```
+---
 
-Clone the repositoryBashgit clone https://github.com/Reazul87/REACT_ASSIGNMENT_B12A09.git
+## ⚡ How to Run Locally
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/RazulBR/REACT_ASSIGNMENT_B12A09.git
 cd REACT_ASSIGNMENT_B12A09
-Install dependenciesBashnpm install
-Create .env file with your Firebase config (see above)
-Start the development serverBashnpm run dev
-Open http://localhost:5173 (or the port shown in the terminal)
+```
+---
+### 2. Install dependencies
 
+```bash
+npm install
+```
+---
+### 3. Create .env file with your Firebase config (see above section)
+
+
+Create a `.env` file in the project root:
+
+```env
+VITE_apiKey=your-api-key-here
+VITE_authDomain=your-project.firebaseapp.com
+VITE_projectId=your-project-id
+VITE_storageBucket=your-project.appspot.com
+VITE_messagingSenderId=your-sender-id
+VITE_appId=your-app-id
+```
+
+### 4. Start the development serve
+
+```bash
+npm run dev
+```
+---
+
+### 5. Open in browser
+
+```bash
+Go to http://localhost:5173 (or the port shown in your terminal)
+```
+---
 
 ## 🧑‍💻 Author
 
