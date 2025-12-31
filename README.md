@@ -15,7 +15,7 @@ It offers a smooth and responsive shopping experience for indoor-plant lovers �
 
 ## 💻 Repository
 
-🔗 **[GitHub](https://github.com/programming-hero-web-course2/b12-a9-firesheild-Reazul87)**
+🔗 **[GitHub](https://github.com/Reazul87/REACT_ASSIGNMENT_B12A09)**
 
 ---
 
